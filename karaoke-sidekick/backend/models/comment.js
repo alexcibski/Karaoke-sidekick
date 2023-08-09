@@ -2,9 +2,9 @@ const mongoose = require('mongoose')
 
 const commentSchema = new mongoose.Schema(
     {
-        success: {type: string},
-        improvements: {type: string},
-        doAgain: {type: string}
+        success: {type: String},
+        improvements: {type: String},
+        doAgain: {type: String},
     }
 )
-module.exports = mongoose.model('Comment', commentSchema)
+module.exports = commentSchema
