@@ -30,8 +30,8 @@ router.post('/create/:songId', (req, res) => {
 
 //delete
 router.delete('/:id', (req, res) => {
-    db.Song.findByIdAndUpdate(
-        {'songs._id': req.params.id},
+    db.Song.findOneAndUpdate(
+        {'comments._id': req.params.id},
         { $pull: {comments: {_id: req.params.id}}},
         {new: true}
     )
