@@ -8,7 +8,7 @@ const db = require('../models')
 //routes
 //index
 router.get('/', (req, res) => {
-    db.Song.find({}, { songs: true, _id: false})
+    db.Song.find({}, { comments: true, _id: false})
         .then(songs => {
             const flatList =[]
             for (let song of songs) {

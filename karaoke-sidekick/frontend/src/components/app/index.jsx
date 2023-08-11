@@ -7,7 +7,7 @@ export default function App() {
         <nav>
             <Link to="/">Home</Link>
             <br></br>
-            <Link to="/search">CLICK HERE TO GET STARTED!!!</Link>            
+                        
         </nav>
         
         <Routes>
