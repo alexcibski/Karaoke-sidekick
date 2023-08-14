@@ -19,11 +19,18 @@ app.use(cors())
 //body parser
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
+app.use(express.static(path.join(path.dirname(__dirname), 'frontend', 'dist')))
 
 
 //mount routes
 app.use('/api/songs', songsCtrl)
 app.use('/api/comments', commentsCtrl)
+
+// Any other route not matching the routes above gets routed by React
+app.get('*', (req, res) => {
+    res.sendFile(path.join(path.dirname(__dirname), 'frontend', 'dist', 'index.html'));
+});
+
 
 //tell app to listen to port
 app.listen(process.env.PORT, function () {
