@@ -2,9 +2,7 @@
   "name": "karaoke-sidekick",
   "private": true,
   "version": "0.0.0",
-  "engines": {
-    "node": "20.2.0"
-  },
+  
   "scripts": {
     "backend": "nodemon backend/server.js",
     "frontend": "vite",
