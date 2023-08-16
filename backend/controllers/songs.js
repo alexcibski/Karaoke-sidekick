@@ -11,6 +11,12 @@ router.get('/', function (req, res) {
     db.Song.find({})
         .then(songs => res.json(songs))
 })
+//show route
+router.get('/sort/:sort', function(req, res) {
+    console.log(req.params)
+    db.Song.find({sort: req.params.sort})
+        .then(songs => res.json(songs))
+})
 //create route
 router.post('/', (req, res) => {
     db.Song.create(req.body)

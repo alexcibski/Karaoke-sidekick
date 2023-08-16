@@ -3,6 +3,11 @@ import { Routes, Route, Link } from "react-router-dom";
 import HomePage from "../HomePage";
 import SearchPage from "../SearchPage";
 import DetailsPage from "../DetailsPage"
+import EasyPage from '../EasyPage';
+import PopPage from '../PopPage';
+import GiftedPage from '../GiftedPage';
+import PinaPage from '../PinaPage';
+import HypePage from '../HypePage';
 
 export default function App() {
     //store api data here
@@ -13,8 +18,9 @@ export default function App() {
     async function getData(url) {
         const res = await fetch(url)
         const { data } = await res.json()
+        console.log({data})
         //destructure json response
-        setSongs([...songs, ...data])
+        setSongs([...songs, ...data ])
     }
 
     //query api component mount
@@ -24,12 +30,7 @@ export default function App() {
     
     return (
         <>
-        <nav>
-            <Link to="/">Home</Link>
-            <br></br>
-                        
-        </nav>
-        
+                       
         <Routes>
             <Route path="/" element={<HomePage/>}/>
             <Route path="/search" element={<SearchPage
@@ -38,6 +39,11 @@ export default function App() {
                 setDetailsData={setDetailsData}
                 />}/>
             <Route path="/details" element={<DetailsPage {...detailsData}/>}/>
+            <Route path="/easy" element={<EasyPage updateDetails={setDetailsData} />}/>
+            <Route path="/pop" element={<PopPage updateDetails={setDetailsData} />}/>
+            <Route path="/gifted" element={<GiftedPage updateDetails={setDetailsData} />}/>
+            <Route path="/pina" element={<PinaPage updateDetails={setDetailsData} />}/>
+            <Route path="/hype" element={<HypePage updateDetails={setDetailsData} />}/>
         </Routes>
         </>
     )

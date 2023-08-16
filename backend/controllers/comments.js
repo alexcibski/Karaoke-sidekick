@@ -17,7 +17,14 @@ router.get('/', (req, res) => {
             res.json(flatList)
         })
 })
-
+//show
+router.get('/:id', (req, res) => {
+    db.Song.findOne(
+        {'comments._id': req.params.id},
+        {'comments.$': true, _id: false}
+    )
+        .then(song => res.json(song))
+})
 //create
 router.post('/create/:songId', (req, res) => {
     db.Song.findByIdAndUpdate(
