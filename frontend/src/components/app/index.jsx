@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Routes, Route, Link } from "react-router-dom";
+import 'semantic-ui-css/semantic.min.css'
 import HomePage from "../HomePage";
 import SearchPage from "../SearchPage";
 import DetailsPage from "../DetailsPage"
@@ -18,9 +19,9 @@ export default function App() {
     async function getData(url) {
         const res = await fetch(url)
         const { data } = await res.json()
-        console.log({data})
+        
         //destructure json response
-        setSongs([...songs, ...data ])
+        setSongs([...songs ])
     }
 
     //query api component mount

@@ -21,7 +21,7 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
     db.Song.findOne(
         {'comments._id': req.params.id},
-        {'comments.$': true, _id: false}
+        // {'comments.$': true, _id: false}
     )
         .then(song => res.json(song))
 })

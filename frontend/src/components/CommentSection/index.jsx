@@ -11,13 +11,11 @@ export default function CommentSection({songId}) {
         improvements: '',
         doAgain: ''
     })
-
-    //query database for all comments that pertain to this artwork
     useEffect(() => {
         getComments(songId)
             .then(comments => setComments(comments))
     }, [])
-
+    
     //update form fields as user types
     function handleInputCHange(event) {
         setCreateFormData({
@@ -51,10 +49,11 @@ export default function CommentSection({songId}) {
         setShowCreateForm(false)
         //create comment in backend
         postComment({...createFormData, songId: songId})
-            .then(() => refreshComments)
+            .then(() => refreshComments())
     }
 
     //conditionally render comments
+    
     let commentElements = [<p key='0'>No comments yet</p>]
     if (comments.length > 0) {
         commentElements = comments.map(comment => {

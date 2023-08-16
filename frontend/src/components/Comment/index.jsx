@@ -8,7 +8,7 @@ export default function Comment({ data, refreshComments}) {
         improvements: data.improvements,
         doAgain: data.doAgain
     })
-
+    
 //update the form as user types
 function handleInputCHange(event) {
     setEditFormData({
@@ -33,7 +33,7 @@ function handleDelete() {
     deleteComment(data._id)
         .then(() => refreshComments)
 }
-
+console.log(data)
 //default jsx of comment
 let commentElement = <div>
     <p>{data.success}</p>
