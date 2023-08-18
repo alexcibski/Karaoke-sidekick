@@ -27,11 +27,11 @@ function handleSubmit(event) {
     updateComment(editFormData, data._id)
         .then(() => refreshComments())
 }
-
+console.log(data._id)
 //delete comment
 function handleDelete() {
     deleteComment(data._id)
-        .then(() => refreshComments)
+        .then(() => refreshComments())
 }
 
 //default jsx of comment

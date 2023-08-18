@@ -36,15 +36,15 @@ export default function DetailsPage(props) {
     // Render details data saved in local storage if no data in app state
     useEffect(() => {
         if (props.id) {
-            // localStorage.setItem('detailsData', JSON.stringify(props));
-            localStorage.setItem('detailsData', props)
-            console.log(localStorage)
-        } else {
-            const storedData = JSON.parse(localStorage.getItem('detailsData'))
-            props.updateDetails(storedData)    
+            localStorage.setItem('detailsData', JSON.stringify(props));
+            // localStorage.setItem('detailsData', props)
+            // console.log(localStorage)
+        // } else {
+        //     const storedData = JSON.parse(localStorage.getItem('detailsData'))
+        //     props.updateDetails(storedData)    
         
-        }
-    });
+        // }
+ } });
 
     return (
         <Container>
@@ -55,7 +55,7 @@ export default function DetailsPage(props) {
                     <Header as="h3">{props.artist}</Header>
                     <Header as="h3">{props.genre}</Header>
                 </div>
-                <CommentSection songId={props.id} />
+                <CommentSection songId={props._id} />
             </Segment>
         </Container>
     );

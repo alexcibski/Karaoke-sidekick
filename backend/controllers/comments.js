@@ -7,10 +7,11 @@ const db = require('../models')
 
 //routes
 //index
-router.get('/', (req, res) => {
-    db.Comment.find(req.params.id)
+router.get('/:songId',  (req, res) => {
+    db.Comment.find({songId: req.params.songId})
         .then(comments => res.json(comments))
 })
+
 //show
 // router.get('/:id', (req, res) => {
 //     db.Comment.find(req.params.id)
