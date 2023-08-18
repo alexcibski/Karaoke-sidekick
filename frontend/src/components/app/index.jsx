@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Routes, Route, Link } from "react-router-dom";
 import 'semantic-ui-css/semantic.min.css'
 import HomePage from "../HomePage";
-import SearchPage from "../SearchPage";
+
 import DetailsPage from "../DetailsPage"
 import EasyPage from '../EasyPage';
 import PopPage from '../PopPage';
@@ -34,11 +34,7 @@ export default function App() {
                        
         <Routes>
             <Route path="/" element={<HomePage/>}/>
-            <Route path="/search" element={<SearchPage
-                songs={songs}
-                getData={getData}
-                setDetailsData={setDetailsData}
-                />}/>
+            
             <Route path="/details" element={<DetailsPage {...detailsData}/>}/>
             <Route path="/easy" element={<EasyPage updateDetails={setDetailsData} />}/>
             <Route path="/pop" element={<PopPage updateDetails={setDetailsData} />}/>

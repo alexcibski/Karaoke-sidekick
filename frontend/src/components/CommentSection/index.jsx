@@ -71,8 +71,8 @@ export default function CommentSection({songId}) {
     }
 
     return (
-        <div>
-            <h2>Singer thoughts</h2>
+        <div style={{border: '1px solid purple', padding: '10px'}}>
+            <h3>Singer thoughts</h3>
             <button onClick={toggleCreateForm}>
                 {btnText}
                 </button>

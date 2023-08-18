@@ -36,9 +36,9 @@ function handleDelete() {
 
 //default jsx of comment
 let commentElement = <div>
-    <p>{data.success}</p>
-    <p>{data.improvements}</p>
-    <p>{data.doAgain}</p>
+    <p>Successful?  {data.success}</p>
+    <p>Ways To Improve:  {data.improvements}</p>
+    <p>Sing Again?   {data.doAgain}</p>
     <div>
         <button onClick={() => {setShowEditForm(true)}}>Edit</button>
         <button onClick={handleDelete}>Delete</button>

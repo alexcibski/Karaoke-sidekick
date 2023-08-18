@@ -20,7 +20,7 @@ export default function PopPage({updateDetails}) {
     
     return (
         <>
-        <Link to="/">Home</Link>
+        <Link to="/" ><h2 style={{color: 'lavender'}}>Home</h2></Link>
         {popContent}
         </>
     )
