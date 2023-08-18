@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const commentSchema = require('./comment');
 
 const songSchema = new mongoose.Schema(
     {
@@ -7,8 +6,7 @@ const songSchema = new mongoose.Schema(
         artist: { type: String, required: true},
         genre: { type: String, required: true},
         sort: { type: String},  
-        //comment schema below
-        comments: [commentSchema]      
+              
     }
 );
 

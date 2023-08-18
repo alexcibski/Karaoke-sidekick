@@ -17,7 +17,7 @@ export default function CommentSection({songId}) {
     }, [])
     
     //update form fields as user types
-    function handleInputCHange(event) {
+    function handleInputChange(event) {
         setCreateFormData({
            ...createFormData,
            [event.target.name]: event.target.value 
@@ -83,20 +83,20 @@ export default function CommentSection({songId}) {
                         name="success"
                         placeholder="was successful"
                         value={createFormData.success}
-                        onChange={handleInputCHange}
+                        onChange={handleInputChange}
                         />
                         <br />
                         <textarea 
                         name="improvements"
                         placeholder="how could you improve?"
                         value={createFormData.improvements}
-                        onChange={handleInputCHange}/>
+                        onChange={handleInputChange}/>
                         <br />
                         <input 
                         name="doAgain"
                         placeholder="yes"
                         value={createFormData.doAgain}
-                        onChange={handleInputCHange}
+                        onChange={handleInputChange}
                         />
                         <button type="submit">Post</button>
                     </form>

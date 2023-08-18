@@ -9,5 +9,6 @@ db.on('connected', function () {
 });
 
 module.exports = {
-    Song: require('./song')
+    Song: require('./song'),
+    Comment: require('./comment')
 }

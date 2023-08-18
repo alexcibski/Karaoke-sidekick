@@ -20,7 +20,7 @@ function handleInputCHange(event) {
 //execute form submission logic
 function handleSubmit(event) {
     //prevent page from reloading
-    event.preventDefualt()
+    event.preventDefault()
     //close the form
     setShowEditForm(false)
     //update comment in backend
@@ -33,7 +33,7 @@ function handleDelete() {
     deleteComment(data._id)
         .then(() => refreshComments)
 }
-console.log(data)
+
 //default jsx of comment
 let commentElement = <div>
     <p>{data.success}</p>
@@ -47,7 +47,7 @@ let commentElement = <div>
 
 //change comment to form if showeditform stat var is true
     if (showEditForm) {
-        commentElement = <form>
+        commentElement = <form onSubmit={handleSubmit}>
             <input 
                 name="success" 
                 placeholder="was successful" 

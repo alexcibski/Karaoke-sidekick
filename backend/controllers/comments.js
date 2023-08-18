@@ -8,41 +8,36 @@ const db = require('../models')
 //routes
 //index
 router.get('/', (req, res) => {
-    db.Song.find({}, { comments: true, _id: false})
-        .then(songs => {
-            const flatList =[]
-            for (let song of songs) {
-                flatList.push(...song.comments)
-            }
-            res.json(flatList)
-        })
+    db.Comment.find(req.params.id)
+        .then(comments => res.json(comments))
 })
 //show
-router.get('/:id', (req, res) => {
-    db.Song.findOne(
-        {'comments._id': req.params.id},
-        // {'comments.$': true, _id: false}
-    )
-        .then(song => res.json(song))
-})
+// router.get('/:id', (req, res) => {
+//     db.Comment.find(req.params.id)
+//         .then(comment => res.json(comment))
+// })
+
+
 //create
-router.post('/create/:songId', (req, res) => {
-    db.Song.findByIdAndUpdate(
-        req.params.songId,
-        { $push: {comments: req.body}},
+router.post('/', (req, res) => {
+    db.Comment.create(req.body)
+        .then(comment => res.json(comment))
+})
+
+//update
+router.put('/:id', (req, res) => {
+    db.Comment.findByIdAndUpdate(
+        req.params.id,
+        req.body,
         {new: true}
     )
-        .then(song => res.json(song))
+    .then(comment => res.json(comment))
 })
 
 //delete
 router.delete('/:id', (req, res) => {
-    db.Song.findOneAndUpdate(
-        {'comments._id': req.params.id},
-        { $pull: {comments: {_id: req.params.id}}},
-        {new: true}
-    )
-        .then(song => res.json(song))
+    db.Comment.findByIdAndRemove(req.params.id)
+        .then(() => res.json({deletedCommentId: req.params.id}))
 })
 //export
 module.exports = router
