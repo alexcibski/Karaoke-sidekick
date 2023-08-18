@@ -10,9 +10,9 @@ export default function Card({ songData, updateDetails }) {
                         <SemanticUICard fluid style={{background: 'lavender'}}>
                             <SemanticUICard.Content>
                                 
-                                <SemanticUICard.Header as="h2" style={{color:'purple'}}>{songData.song}</SemanticUICard.Header>
-                                <SemanticUICard.Meta style={{color:'purple'}}>{songData.artist}</SemanticUICard.Meta>
-                                <SemanticUICard.Description style={{color:'purple'}}>{songData.genre}</SemanticUICard.Description>
+                                <SemanticUICard.Header as="h2" style={{color:'purple'}}>Song: {songData.song}</SemanticUICard.Header>
+                                <SemanticUICard.Meta style={{color:'purple'}}>Artist: {songData.artist}</SemanticUICard.Meta>
+                                <SemanticUICard.Description style={{color:'purple'}}>Genre: {songData.genre}</SemanticUICard.Description>
                             </SemanticUICard.Content>
                         </SemanticUICard>
                     </Link>
