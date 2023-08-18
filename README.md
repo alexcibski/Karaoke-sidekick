@@ -1,10 +1,14 @@
 # Karaoke Sidekick
 An app that helps you select karaoke songs when you can't decide
 
+## Link to deployed app
+ [Karaoke-Sidekick](https://karaoke-sidekick-7ffb0aaffc00.herokuapp.com/)
+
 ## Screenshots
-![Screenshot 2023-08-16 at 7 43 20 AM](https://github.com/alexcibski/Karaoke-sidekick/assets/136136316/846d92ee-787d-4020-afb6-d1a2ee69122e)
-![Screenshot 2023-08-16 at 7 43 55 AM](https://github.com/alexcibski/Karaoke-sidekick/assets/136136316/b9891ee5-e9c5-4210-9b64-f058006c15a4)
-![Screenshot 2023-08-16 at 7 44 20 AM](https://github.com/alexcibski/Karaoke-sidekick/assets/136136316/6fad4f0b-8c39-4413-b688-2248ab5d7f45)
+![Screenshot 2023-08-18 at 12 07 37 PM](https://github.com/alexcibski/Karaoke-sidekick/assets/136136316/af7e5ee6-5594-4eaa-923f-ccc2ec1f6cc4)
+![Screenshot 2023-08-18 at 12 08 50 PM](https://github.com/alexcibski/Karaoke-sidekick/assets/136136316/71777560-be51-440a-a46e-52f2fcfba6c6)
+![Screenshot 2023-08-18 at 12 09 32 PM](https://github.com/alexcibski/Karaoke-sidekick/assets/136136316/e2bcc3cc-9ec6-429c-b0e0-9b4ffd4d0f99)
+
 
 ## Technologies used
 MongoDB, React, Express, Node.js, Semantic UI
