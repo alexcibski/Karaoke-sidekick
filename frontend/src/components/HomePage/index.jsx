@@ -29,6 +29,9 @@ export default function HomePage() {
                         <Link to="/hype">
                             <Segment as="div" textAlign='center'>Get everyone hyped up!!!</Segment>
                         </Link>
+                        <Link>
+                        <Segment as="div" textAlign='center'>Slow things wayy down</Segment>
+                        </Link>
                     </Segment>
                 </Grid.Column>
             </Grid>

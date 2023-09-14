@@ -9,6 +9,7 @@ import PopPage from '../PopPage';
 import GiftedPage from '../GiftedPage';
 import PinaPage from '../PinaPage';
 import HypePage from '../HypePage';
+import SlowPage from '../SlowPage';
 
 export default function App() {
     //store api data here
@@ -41,6 +42,7 @@ export default function App() {
             <Route path="/gifted" element={<GiftedPage updateDetails={setDetailsData} />}/>
             <Route path="/pina" element={<PinaPage updateDetails={setDetailsData} />}/>
             <Route path="/hype" element={<HypePage updateDetails={setDetailsData} />}/>
+            <Route path="/slow" element={<SlowPage updateDetails={setDetailsData} />}/>
         </Routes>
         </>
     )
