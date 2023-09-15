@@ -29,7 +29,7 @@ export default function HomePage() {
                         <Link to="/hype">
                             <Segment as="div" textAlign='center'>Get everyone hyped up!!!</Segment>
                         </Link>
-                        <Link>
+                        <Link to="/slow">
                         <Segment as="div" textAlign='center'>Slow things wayy down</Segment>
                         </Link>
                     </Segment>
