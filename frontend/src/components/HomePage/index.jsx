@@ -51,6 +51,12 @@ export default function HomePage() {
                                 Slow things way down
                             </Segment>
                         </Link>
+                        <Link to="/theme">
+                            <Segment className="home-link-segment" textAlign='center'>
+                                <Icon name="tv" size="big" />
+                                Sing a TV theme song
+                            </Segment>
+                        </Link>
                     </Segment>
                 </Grid.Column>
             </Grid>
